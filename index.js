@@ -16,8 +16,8 @@
         var shortenedDays = countShortenedDays(etsDate);
         var newDays = countDays(join, shortenedEtsDate);
         var leftDays = countDaysFromNow(shortenedEtsDate);
-        var doneDays = (-1) * countDaysFromNow(join);
-        var donePercent = Math.ceil((doneDays / leftDays) * 10000) / 100; // **.**
+        var doneDays = countDays(join, new Date());
+        var donePercent = Math.ceil((doneDays / shortenedEtsDate) * 10000) / 100; // **.**
 
         $("#original-ets-date").text("기존 전역일: " + etsDate.yyyymmdd("-"));
         $("#shortened-ets-date").text("단축 이후 전역일: " + shortenedEtsDate.yyyymmdd("-"));
