@@ -1,8 +1,9 @@
-body {
-    background-color: #fcfcfc;
+*:focus {
+    outline: none;
 }
 
 body {
+    background-color: #fcfcfc;
     text-align: center;
 }
 
@@ -15,6 +16,9 @@ body {
     display: block;
     margin: auto;
     font-size: 1.2em;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 5px;
 }
 
 #join-label {
@@ -25,7 +29,17 @@ body {
     font-size: 1.2em;
     width: 120px;
     margin: 20px 0;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2px 5px;
 }
+
+#join-input::placeholder {
+    color: lightgray;
+    font-weight: 300;
+    font-size: 0.8em;
+} 
 
 #submit-button {
     display: block;
@@ -41,10 +55,6 @@ body {
 
 #submit-button:active {
     background: lightblue;
-}
-
-#submit-button:focus {
-    outline: none;
 }
 
 #result-container {
