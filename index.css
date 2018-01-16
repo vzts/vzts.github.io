@@ -39,7 +39,7 @@ body {
     color: lightgray;
     font-weight: 300;
     font-size: 0.8em;
-} 
+}
 
 #submit-button {
     display: block;
@@ -79,4 +79,12 @@ body {
 
 #visitor-count {
     margin-top: 90px;
+}
+
+#visitor-count br {
+    display: none;
+}
+
+#visitor-count a:last-child {
+    display: none;
 }
