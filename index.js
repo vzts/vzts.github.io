@@ -18,6 +18,7 @@
         var leftDays = countDaysFromNow(shortenedEtsDate);
         var doneDays = newDays - leftDays;
         var donePercent = Math.ceil(doneDays / newDays * 10000) / 100; // **.**
+        var donePercentFix = donePercent < 0 ? 0 : donePercent;
 
         $("#original-ets-date").text(etsDate.yyyymmdd("-"));
         $("#shortened-ets-date").text(shortenedEtsDate.yyyymmdd("-"));
