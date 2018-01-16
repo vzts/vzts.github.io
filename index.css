@@ -76,3 +76,7 @@ body {
     padding-left: 160px;
     text-align: right;
 }
+
+#visitor-count {
+    margin-top: 90px;
+}
