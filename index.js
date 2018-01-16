@@ -25,6 +25,7 @@
         $("#original-days").text(originalDays + "일");
         $("#shortened-days").text(shortenedDays + "일");
         $("#new-days").text(newDays + "일");
+        $("#done-days").text(doneDays + "일");
         $("#left-days").text(leftDays + "일");
         $("#percentage-done").text(donePercent + "%");
     });
