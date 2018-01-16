@@ -16,16 +16,16 @@
         var shortenedDays = countShortenedDays(etsDate);
         var newDays = countDays(join, shortenedEtsDate);
         var leftDays = countDaysFromNow(shortenedEtsDate);
-        var doneDays = countDays(join, new Date());
+        var doneDays = newDays - leftDays;
         var donePercent = Math.ceil(doneDays / newDays * 10000) / 100; // **.**
 
-        $("#original-ets-date").text("기존 전역일: " + etsDate.yyyymmdd("-"));
-        $("#shortened-ets-date").text("단축 이후 전역일: " + shortenedEtsDate.yyyymmdd("-"));
-        $("#original-days").text("기존 복무 일수: " + originalDays + "일");
-        $("#shortened-days").text("단축된 복무 일수: " + shortenedDays + "일");
-        $("#new-days").text("단축 이후 복무 일수: " + newDays + "일");
-        $("#left-days").text("남은 일수: " + leftDays + "일");
-        $("#percentage-done").text("완료한 퍼센트: " + donePercent + "%");
+        $("#original-ets-date").text(etsDate.yyyymmdd("-"));
+        $("#shortened-ets-date").text(shortenedEtsDate.yyyymmdd("-"));
+        $("#original-days").text(originalDays + "일");
+        $("#shortened-days").text(shortenedDays + "일");
+        $("#new-days").text(newDays + "일");
+        $("#left-days").text(leftDays + "일");
+        $("#percentage-done").text(donePercent + "%");
     });
 
     function getShortenedEtsDate(join, serviceMonth) {

@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f5f5;
+    background-color: #fcfcfc;
 }
 
 body {
@@ -44,6 +44,21 @@ body {
 }
 
 #result-container {
-    margin-top: 30px;
+    margin-top: 60px;
     text-align: left;
+}
+
+#result-container .item {
+    margin-bottom: 30px;
+}
+
+#result-container .label {
+    display: inline-block;
+    margin: 0;
+}
+
+#result-container .item div {
+    font-weight: bold;
+    padding-left: 160px;
+    text-align: right;
 }
