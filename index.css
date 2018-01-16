@@ -1,3 +1,49 @@
 body {
     background-color: #f5f5f5;
 }
+
+body {
+    text-align: center;
+}
+
+#wrapper {
+    margin-top: 50px;
+    display: inline-block;
+}
+
+#type-select {
+    display: block;
+    margin: auto;
+    font-size: 1.2em;
+}
+
+#join-label {
+    font-size: 1.2em;
+}
+
+#join-input {
+    font-size: 1.2em;
+    width: 120px;
+    margin: 20px 0;
+}
+
+#submit-button {
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 100px;
+    font-size: 1.0em;
+    border: none;
+    background: lightskyblue;
+    border-radius: 5px;
+    color: white;
+}
+
+#submit-button:active {
+    background: lightblue;
+}
+
+#result-container {
+    margin-top: 30px;
+    text-align: left;
+}

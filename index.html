@@ -8,27 +8,31 @@
 </head>
 
 <body>
-	<form>
-		<select name="type" id="type-select">
-			<option value="21" selected="selected">육군/의경</option>
-			<option value="23">해군/해양의무경찰</option>
-			<option value="24">공군</option>
-			<option value="21">해병</option>
-			<option value="24">사회복무요원</option>
-			<option value="23">의무소방</option>
-		</select>
-		<label>입대일:</label>
-		<input type="date" name="join" id="join-input">
-		<input type="submit">
-	</form>
-	
-	<div id="original-ets-date"></div>
-	<div id="shortened-ets-date"></div>
-	<div id="original-days"></div>
-	<div id="shortened-days"></div>
-	<div id="new-days"></div>
-	<div id="left-days"></div>
-	<div id="percentage-done"></div>
+	<div id="wrapper">
+		<form id="input-form">
+			<select name="type" id="type-select">
+				<option value="21" selected="selected">육군/의경</option>
+				<option value="23">해군/해양의무경찰</option>
+				<option value="24">공군</option>
+				<option value="21">해병</option>
+				<option value="24">사회복무요원</option>
+				<option value="23">의무소방</option>
+			</select>
+			<label id="join-label">입대일:</label>
+			<input type="text" name="join" id="join-input" placeholder="예)20180115">
+			<button id="submit-button">계산</button>
+		</form>
+
+		<div id="result-container">
+			<div id="original-ets-date"></div>
+			<div id="shortened-ets-date"></div>
+			<div id="original-days"></div>
+			<div id="shortened-days"></div>
+			<div id="new-days"></div>
+			<div id="left-days"></div>
+			<div id="percentage-done"></div>
+		</div>
+	</div>
 
 </body>
 <script src="jquery.min.js"></script>

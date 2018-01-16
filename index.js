@@ -4,9 +4,10 @@
 
     addDateFormatPrototype();
 
-    $("form").on("submit", function (e) {
+    $("#submit-button").on("click", function (e) {
         e.preventDefault();
-        var join = new Date(joinInput.val());
+        var input = joinInput.val();
+        var join = new Date(input.substring(0,4), input.substring(4,6), input.substring(6,8));
         var serviceMonth = Number(typeSelect.val());
 
         var etsDate = getEtsDate(join, serviceMonth);
