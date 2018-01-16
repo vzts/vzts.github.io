@@ -18,7 +18,8 @@
         var leftDays = countDaysFromNow(shortenedEtsDate);
         var doneDays = newDays - leftDays;
         var donePercent = Math.ceil(doneDays / newDays * 10000) / 100; // **.**
-        var donePercentFix = donePercent < 0 ? 0 : donePercent;
+        donePercent = donePercent < 0 ? 0 : donePercent;
+        donePercent = donePercent > 100 ? 100 : donePercent;
 
         $("#original-ets-date").text(etsDate.yyyymmdd("-"));
         $("#shortened-ets-date").text(shortenedEtsDate.yyyymmdd("-"));
@@ -39,7 +40,8 @@
 
     function countShortenedDays(endDate) {
         // shorten 1 day for every 14 days from the effective date
-        return Math.ceil(countDaysFromEffectiveDate(endDate) / 14);
+        const days = Math.ceil(countDaysFromEffectiveDate(endDate) / 14);
+        return days < 0 ? 0 : days;
     }
 
     function countDaysFromEffectiveDate(endDate) {
