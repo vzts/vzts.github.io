@@ -7,7 +7,7 @@
     $("#submit-button").on("click", function (e) {
         e.preventDefault();
         var input = joinInput.val();
-        var join = new Date(input.substring(0,4), input.substring(4,6), input.substring(6,8));
+        var join = new Date(input.substring(0, 4), input.substring(4, 6) - 1, input.substring(6, 8));
         var serviceMonth = Number(typeSelect.val());
 
         var etsDate = getEtsDate(join, serviceMonth);
@@ -17,7 +17,9 @@
         var newDays = countDays(join, shortenedEtsDate);
         var leftDays = countDaysFromNow(shortenedEtsDate);
         var doneDays = countDays(join, new Date());
-        var donePercent = Math.ceil((doneDays / shortenedEtsDate) * 10000) / 100; // **.**
+        console.log(join);
+        console.log(doneDays);
+        var donePercent = Math.ceil(doneDays * 10000 / shortenedEtsDate); // **.**
 
         $("#original-ets-date").text("기존 전역일: " + etsDate.yyyymmdd("-"));
         $("#shortened-ets-date").text("단축 이후 전역일: " + shortenedEtsDate.yyyymmdd("-"));
